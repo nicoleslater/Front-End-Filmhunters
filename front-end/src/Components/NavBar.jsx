@@ -1,15 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import './NavBar.css'
 const NavBar = () => {
     return (
         <nav>
-            <h1>
-                <Link to="/movies">Movies</Link>
-            </h1>
-            <button>
-                <Link to="/movies/new">New Movie</Link>
-            </button>
+            <img className="logoImage"
+                src="../src/assets/archlogo.jpg"></img>
+            <Link to="/movies">Movies</Link>
+            <Link to="/movies/new">New Movie</Link>
         </nav>
     );
 };
