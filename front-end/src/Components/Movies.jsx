@@ -10,6 +10,7 @@ function Movies() {
     const fetchData = async () => {
       try {
         const response = await fetch(`${API}/movies`);
+        console.log(`${API}/movies`)
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
