@@ -37,17 +37,14 @@ function Favorites() {
   const handleDelete = (favoriteId) => {
     fetch(`${API}/movies/${id}/favorites/${favoriteId}`, { method: "DELETE" })
       .then((response) => {
-        const deletedFavorite = favorites.find(
-          (favorite) => favorite.id === favoriteId
-        );
-
-        const copiedFavoritesArray = [...favorites];
-        copiedFavoritesArray.splice(
-          copiedFavoritesArray.indexOf(deletedFavorite),
-          1
-        );
-
-        setFavorites(copiedFavoritesArray);
+       const copyFavoriteArray = [...favorite];
+       const indexDeletedFavorite = copyFavoriteArray.findIndex(
+        (favorite) => favorite.id === favoriteId
+       );
+       console.log(favoriteId, indexDeletedFavorite);
+       copyFavoriteArray.splice(indexFavoritedReview, 1);
+       console.log("NEW FAVORITES", copyFavoriteArray);
+       setFavorites(copyFavoriteArray);
       })
       .catch((error) => console.log(error));
   };
@@ -60,14 +57,12 @@ function Favorites() {
     })
       .then((response) => response.json())
       .then((responseJSON) => {
-        const copiedFavoriteArray = [...favorites];
-        const indexUpdatedFavorite = copiedFavoriteArray.findIndex(
-          (favorite) => {
-            return favorite.id === updatedFavorite.id;
-          }
-        );
-        copiedFavoriteArray[indexUpdatedFavorite] = responseJSON;
-        setFavorites(copiedFavoriteArray);
+        const copyFavoriteArray = [...favorites];
+        const indexUpdatedFavorite = copyFavoriteArray.findIndex(favorite => {
+            return favorite.id === updatedFavorite.id
+          })
+        copyFavoriteArray[indexUpdatedFavorite] = responseJSON
+        setFavorites(copyFavoriteArray);
       });
   };
 
@@ -77,18 +72,12 @@ function Favorites() {
       <FavoriteForm handleSubmit={handleAdd}>
         <h3>Add a New Favorite</h3>
       </FavoriteForm>
-      {favorites.map((favorite) => {
-        return (
-        <Favorite
-          key={favorite.id}
-          favorite={favorite}
-          handleDelete={handleDelete}
-          handleEdit={handleEdit}
-        />
-        );
-})}
+      {favorites.map((favorite) => (
+      <Favorite key={favorite.id} favorite={favorite} handleDelete={handleDelete} handleEdit={handleEdit} />
+      ))}
     </section>
   );
 }
+
 
 export default Favorites;
