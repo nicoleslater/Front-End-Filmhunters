@@ -1,11 +1,11 @@
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
+  font-weight: 100;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #f41c1c;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,9 +13,49 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+.New.Edit {
+  max-width: 600px; 
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.New.Edit h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.New.Edit form {
+  display: flex;
+  flex-direction: column;
+}
+
+.New.Edit label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.New.Edit input,
+.New.Edit textarea {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.New.Edit button {
+  background: #007bff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.New.Edit button:hover {
+  background: #0062cc;
+}
 
 a {
-  font-weight: 500;
+  font-weight: 100;
   color: #646cff;
   text-decoration: inherit;
 }
