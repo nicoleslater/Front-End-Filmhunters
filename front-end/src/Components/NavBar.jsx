@@ -13,8 +13,8 @@ const NavBar = () => {
       <input type="text" name="q" placeholder="Google Search"/>
       <input type="submit" value="Google Search"/>
     </form> 
-            <Link to="/movies">Movies</Link>
-            <Link to="/movies/new">New Movie</Link>
+            <Link to="/movies" style={{fontSize: "100px"}}>Movies</Link>
+            <Link to="/movies/new" style={{fontSize: "50px"}}>New Movie</Link>
         </nav>
         </div>
     );
