@@ -3,8 +3,8 @@
 const Home = () => {
     return (
         <div>
-            <h2>FILMHUNTERS!</h2>
-            <h3>Cinema Caache</h3>
+            <h1>FILMHUNTERS!</h1>
+            <h1>Let's get Diggin'</h1>
         </div>
     );
 };
