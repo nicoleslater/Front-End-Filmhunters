@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 import Favorite from "./Favorite";
 import FavoriteForm from "./FavoriteForm";
@@ -35,7 +35,7 @@ function Favorites() {
   };
 
   const handleDelete = (favoriteId) => {
-    fetch(`${API}/movies/${id}/movies/${favoriteId}`, { method: "DELETE" })
+    fetch(`${API}/movies/${id}/favorites/${favoriteId}`, { method: "DELETE" })
       .then((response) => {
         const deletedFavorite = favorites.find(
           (favorite) => favorite.id === favoriteId
@@ -78,12 +78,14 @@ function Favorites() {
         <h3>Add a New Favorite</h3>
       </FavoriteForm>
       {favorites.map((favorite) => {
+        return (
         <Favorite
           key={favorite.id}
           favorite={favorite}
           handleDelete={handleDelete}
           handleEdit={handleEdit}
         />
+        );
 })}
     </section>
   );
