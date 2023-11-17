@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Movie from "./Movie";
 
-const API = import.meta.env.VITE_BASE_URL;
+const API = import.meta.env.VITE_API_URL;
 
 function Movies() {
   const [movies, setMovies] = useState([]);

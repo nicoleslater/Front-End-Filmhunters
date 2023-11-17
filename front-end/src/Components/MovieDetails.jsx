@@ -3,7 +3,7 @@ import { useState, useEffect} from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import Favorites from "./Favorites"
 
-const API = import.meta.env.VITE_BASE_URL
+const API = import.meta.env.VITE_API_URL
 
 function MovieDetails(){
     const [movie, setMovie] = useState([]);
