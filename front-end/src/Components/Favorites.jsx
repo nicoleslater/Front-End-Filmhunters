@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Favorite from "./Favorite";
 import FavoriteForm from "./FavoriteForm";
 
-const API = import.meta.env.VITE_BASE_URL;
+const API = import.meta.env.VITE_API_URL;
 
 function Favorites() {
   const [favorites, setFavorites] = useState([]);
@@ -72,9 +72,9 @@ function Favorites() {
       <FavoriteForm handleSubmit={handleAdd}>
         <h3>Add a New Favorite</h3>
       </FavoriteForm>
-      {favorites.map((favorite) => (
+      {favorites.map((favorite) => {
       <Favorite key={favorite.id} favorite={favorite} handleDelete={handleDelete} handleEdit={handleEdit} />
-      ))}
+})}
     </section>
   );
 }

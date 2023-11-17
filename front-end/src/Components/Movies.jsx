@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Movie from "./Movie";
 
-const API = import.meta.env.VITE_BASE_URL;
+const API = import.meta.env.VITE_API_URL;
 
 function Movies() {
   const [movies, setMovies] = useState([]);
@@ -10,6 +10,7 @@ function Movies() {
     const fetchData = async () => {
       try {
         const response = await fetch(`${API}/movies`);
+        console.log(`${API}/movies`)
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
         }
