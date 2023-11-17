@@ -70,7 +70,7 @@ function MovieEditForm(){
                 value={movie.title}
                 type="text"
                 onChange={handleTextChange}
-                placeholder="Davon & Nicole's Favorite Movies"
+                placeholder="Title of the movie..."
                 required
                 />
                 <label htmlFor="url">URL:</label>
@@ -78,7 +78,6 @@ function MovieEditForm(){
                 id="url"
                 type="text"
                 pattern="http[s]*//.+"
-                required
                 value={movie.url}
                 placeholder="http://"
                 onChange={handleTextChange}
