@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Favorite from "./Favorite";
 import FavoriteForm from "./FavoriteForm";
 
-const API = import.meta.env.VITE_BASE_URL;
+const API = import.meta.env.VITE_API_URL;
 
 function Favorites() {
   const [favorites, setFavorites] = useState([]);

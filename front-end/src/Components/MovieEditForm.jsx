@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import React from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 
-const API = import.meta.env.VITE_BASE_URL;
+const API = import.meta.env.VITE_API_URL;
 
 
 function MovieEditForm(){
