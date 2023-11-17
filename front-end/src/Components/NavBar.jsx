@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./NavBar.css";
 
 
 const NavBar = () => {
     return (
         <div> 
+            <div class="navbar">
+            <a href="../front-end/src/Pages/Home.jsx">Home</a>
+            <a href="../front-end/src/Pages/Index.jsx">Movie List</a>
+            <a href="../front-end/src/Pages/New.jsx">Create Favorite</a>
+          </div>
         <nav>
         <h6 style={{color: "white", height: "0px", padding: "1px"}}>
            🍿 Search for Movies by Google 🍿
