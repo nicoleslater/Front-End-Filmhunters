@@ -5,7 +5,7 @@ const NavBar = () => {
     return (
         <nav>
             <img className="logoImage"
-                src="../src/assets/archlogo.jpg"></img>
+                src="../src/assets/bug.jpeg"></img>
             <Link to="/movies">Movies</Link>
             <Link to="/movies/new">New Movie</Link>
         </nav>
