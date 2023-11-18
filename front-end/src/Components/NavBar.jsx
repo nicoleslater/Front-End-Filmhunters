@@ -4,26 +4,22 @@ import "./NavBar.css";
 
 
 const NavBar = () => {
-    return (
-        <div> 
-            <div class="navbar">
-            <a href="../front-end/src/Pages/Home.jsx">Home</a>
-            <a href="../front-end/src/Pages/Index.jsx">Movie List</a>
-            <a href="../front-end/src/Pages/New.jsx">Create Favorite</a>
-          </div>
-        <nav>
-        <h6 style={{color: "white", height: "0px", padding: "1px"}}>
-           🍿 Search for Movies by Google 🍿
-          </h6>
-    <form action="https://www.google.com/search" method="GET">
-      <input type="text" name="q" placeholder="Google Search"/>
-      <input type="submit" value="Google Search"/>
-    </form> 
-            <Link to="/movies" style={{fontSize: "100px"}}>Movies</Link>
-            <Link to="/movies/new" style={{fontSize: "50px"}}>New Movie</Link>
-        </nav>
-        </div>
-    );
+  return (
+    <div>
+      <div class="navbar">
+        <a href="../front-end/src/Pages/Home.jsx">Home</a>
+        <a href="../front-end/src/Pages/Index.jsx">Movie List</a>
+        <a href="../Movies.jsx">Movies</a>
+        <a href="../front-end/src/Pages/New.jsx">New Movie</a>
+        <a href="../Favorite.jsx">Create Favorite</a>
+        <form className="googleSearchBar" action="https://www.google.com/search" method="GET">
+          <input type="text" name="q" placeholder="Google Search" />
+          <input className="googleSearchBarButton" type="submit" value="Google Search" />
+        </form>
+      </div>
+     
+    </div>
+  );
 };
 
 export default NavBar;

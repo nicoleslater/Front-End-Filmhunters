@@ -29,13 +29,6 @@ function Movies() {
     <div className="Movies">
       <section>
         <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Let me hunt for Films!</th>
-              <th>I want to see this movie</th>
-            </tr>
-          </thead>
           <tbody>
             {movies.map((movie) => (
               <Movie key={movie.id} movie={movie} />
