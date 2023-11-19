@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Movie from "./Movie";
 
-const API = import.meta.env.VITE_API_URL;
+const API = import.meta.env.VITE_BASE_URL;
 
 function Movies() {
   const [movies, setMovies] = useState([]);
@@ -27,6 +27,7 @@ function Movies() {
 
   return (
     <div className="Movies">
+      <h1>MOVIE LIST</h1>
       <section>
         <table>
           <tbody>
