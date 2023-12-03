@@ -1,6 +1,6 @@
 import React, { useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
-
+import "./FavoriteForm.css"
 
 function FavoriteForm({ favoriteDetails, handleSubmit, toggleView, children }){
     let {id} = useParams();

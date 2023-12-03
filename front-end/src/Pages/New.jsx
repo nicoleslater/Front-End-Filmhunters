@@ -1,6 +1,6 @@
 
 import MovieNewForm from "../Components/MovieNewForm";
-
+import "./New.css"
 function New() {
   return (
     <div className="New">

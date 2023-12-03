@@ -3,9 +3,12 @@ import "./Home.css";
 const Home = () => {
     return (
         <div>
-        <h1>WELCOME TO FILMHUNTERS!</h1>
-        <h2>LETS GET DIGGING!</h2>
-        </div>
+       
+        <article className="wrapper">
+        <h2 class="title">WELCOME TO FILMHUNTERS!</h2>
+        
+      </article>
+      </div>
     );
 };
 

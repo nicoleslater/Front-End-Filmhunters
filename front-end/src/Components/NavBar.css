@@ -1,14 +1,17 @@
-
-
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    overflow: hidden;
-    background-color: #333;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-  }
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px 20px;
+  display: left;
+  justify-content: space-between;
+  align-items: left;
+  z-index: 1000;
+  color: brown;
+}
  
 .navbar a {
     float: left;
@@ -17,11 +20,12 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    font-size: x-large;
   }
   
   .navbar a:hover {
     background-color: #ddd;
-    color: black;
+    color: goldenrod;
   }
   
   input[type="text"] {

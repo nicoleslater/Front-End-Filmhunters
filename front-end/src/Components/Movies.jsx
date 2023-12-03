@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Movie from "./Movie";
-
+import "./Movies.css"
+import "../Pages/Home.css"
 const API = import.meta.env.VITE_BASE_URL;
 
 function Movies() {
