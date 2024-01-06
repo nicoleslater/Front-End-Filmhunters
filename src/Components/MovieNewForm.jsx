@@ -74,6 +74,7 @@ function MovieNewForm() {
           placeholder="Action, Comedy, ..."
           onChange={handleTextChange}
         />
+        <></>
         <label htmlFor="isFavorite">Favorite:</label>
         <input
           id="is_favorite"
@@ -81,6 +82,7 @@ function MovieNewForm() {
           onChange={handleCheckboxChange}
           checked={movie.is_favorite}
         />
+
         <br />
         <input type="submit" />
       </form>
