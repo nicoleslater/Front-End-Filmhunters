@@ -13,7 +13,7 @@ function MovieNewForm() {
     genre: "",
     rated: "",
     is_favorite: false,
-    imdb_Ratings: 0,
+    imdb_Ratings: "",
   });
 
   const addMovie = () => {
@@ -46,43 +46,78 @@ function MovieNewForm() {
   return (
     <div className="New">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="title">Title:</label>
         <input
           id="title"
           value={movie.title}
           type="text"
           onChange={handleTextChange}
-          placeholder="Title of the Movie..."
+          placeholder="Title"
           required
         />
-        <label htmlFor="url">URL:</label>
+        <input
+          id="genre"
+          type="text"
+          name="genre"
+          required
+          value={movie.genre}
+          placeholder="Genre (Action, RomCom...)"
+          onChange={handleTextChange}
+        />
+        <input 
+          id="director"
+          type="text"
+          name="director"
+          required
+          value={movie.director}
+          placeholder="Director"
+          onChange={handleTextChange}
+        />
+
+        <input
+          id="rated"
+          type="text"
+          name="rated"
+          required
+          value={movie.rated}
+          placeholder="Rated (E, PG13...)"
+          onChange={handleTextChange}
+        />
+        
         <input
           id="url"
           type="text"
           pattern="http[s]*://.+"
           required
           value={movie.url}
-          placeholder="http://"
+          placeholder="http://..."
           onChange={handleTextChange}
         />
-        <label htmlFor="genre">Genre:</label>
+       
+        <label htmlFor="imdb_Ratings">IMDb Rating:</label>
+        <input 
+          id="imdb_Ratings"
+          type="number"
+          placeholder="5, 6.7..."
+          value={movie.imdb_Ratings}
+          onChange={handleTextChange}
+        />
+        <labe htmlFor="released">Released:</labe>
         <input
-          id="genre"
-          type="text"
-          name="genre"
-          value={movie.genre}
-          placeholder="Action, Comedy, ..."
+          id="released"
+          type="date"
+          required 
+          name="releaseDate"
+          value={movie.released}
+          placeholder="MM/DD/YYYY"
           onChange={handleTextChange}
         />
-        <></>
-        <label htmlFor="isFavorite">Favorite:</label>
+         <label htmlFor="is_favorite">Favorite?</label>
         <input
           id="is_favorite"
           type="checkbox"
           onChange={handleCheckboxChange}
           checked={movie.is_favorite}
         />
-
         <br />
         <input type="submit" />
       </form>
