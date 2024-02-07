@@ -20,8 +20,8 @@ function App() {
             <Route path="/movies" element={<Index />} />
             <Route path="/movies/new" element={<New />} />
             <Route exact path="/movies/:id" element={<Show />} />
-            <Route path="/movies/:id/edit" element={<Edit />} />
             <Route path="/favorites" element={<Favorites />} />
+            <Route path="/favorites/:id" element={<ShowFavorites />} />
             <Route path="*" element={<FourOFour />} />
           </Routes>
         </main>
