@@ -1,9 +1,9 @@
-import React, { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 
-function FavoriteForm({ favoriteDetails, handleSubmit, toggleView, children }){
-    let {id} = useParams();
+function FavoriteForm({ favoriteDetails, handleSubmit, toggleView }){
+    let { id } = useParams();
 
     const [favorite, setFavorite] = useState({
         title: "",
@@ -34,12 +34,11 @@ function FavoriteForm({ favoriteDetails, handleSubmit, toggleView, children }){
             rating: 0,
             movie_id: id,
         });
-        console.log(movies);
+        console.log("Setting new favorite!");
     };
 
 return (
     <div className="Edit">
-        {children}
         <form onSubmit={onSubmit}>
             <label htmlFor="title">Title</label>
             <input
