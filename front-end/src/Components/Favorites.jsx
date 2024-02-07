@@ -69,9 +69,6 @@ function Favorites() {
   return (
     <section className="Favorites">
       <h2>Favorites</h2>
-      <FavoriteForm handleSubmit={handleAdd}>
-        <h3>Add a New Favorite</h3>
-      </FavoriteForm>
       {favorites.map((favorite) => {
       <Favorite key={favorite.id} favorite={favorite} handleDelete={handleDelete} handleEdit={handleEdit} />
 })}
