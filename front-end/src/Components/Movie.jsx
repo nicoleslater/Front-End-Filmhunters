@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom";
+
+
+
 function Movie({ movie }){
 
 
@@ -13,6 +17,9 @@ function Movie({ movie }){
           <p>{movie.dvd}</p>
           <p>{movie.imdb_Ratings}</p>
           </section>
+          <div>
+          <Link to={`/movies/${movie.id}`}></Link>
+          </div>
          </div>
   )
 }
