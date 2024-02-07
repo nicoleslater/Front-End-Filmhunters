@@ -1,10 +1,10 @@
 import React from 'react';
-import Favorites from '../Components/Favorites';
+import Favorite from '../Components/Favorite';
 
 function ShowFavorites() {
   return (
     <div>
-      <Favorites />
+      <Favorite />
     </div>
   );
 }
