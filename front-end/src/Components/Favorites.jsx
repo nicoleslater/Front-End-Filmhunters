@@ -1,6 +1,5 @@
-import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-
+import { useParams } from "react-router-dom";
 import Favorite from "./Favorite";
 import FavoriteForm from "./FavoriteForm";
 
@@ -29,7 +28,7 @@ function Favorites() {
     })
       .then((response) => response.json())
       .then((responseJSON) => {
-        setFavorites([...favorites, responseJSON]);
+        setFavorites([...reviews, responseJSON]);
       })
       .catch((error) => console.log(error));
   };
@@ -37,14 +36,14 @@ function Favorites() {
   const handleDelete = (favoriteId) => {
     fetch(`${API}/movies/${id}/favorites/${favoriteId}`, { method: "DELETE" })
       .then((response) => {
-       const copyFavoriteArray = [...favorite];
-       const indexDeletedFavorite = copyFavoriteArray.findIndex(
-        (favorite) => favorite.id === favoriteId
-       );
-       console.log(favoriteId, indexDeletedFavorite);
-       copyFavoriteArray.splice(indexFavoritedReview, 1);
-       console.log("NEW FAVORITES", copyFavoriteArray);
-       setFavorites(copyFavoriteArray);
+        const copyFavoriteArray = [...favorites];
+        const indexDeletedFavorite = copyFavoriteArray.findIndex(
+          (favorite) => favorite.id === favoriteId
+        );
+        console.log(favoriteId, indexDeletedFavorite);
+        copyFavoriteArray.splice(indexDeletedFavorite, 1);
+        console.log("New Favorites", copyFavoriteArray);
+        setFavorites(copyFavoriteArray);
       })
       .catch((error) => console.log(error));
   };
@@ -55,26 +54,28 @@ function Favorites() {
       body: JSON.stringify(updatedFavorite),
       headers: { "Content-Type": "application/json" },
     })
-      .then((response) => response.json())
-      .then((responseJSON) => {
-        const copyFavoriteArray = [...favorites];
+    .then((response) => response.json())
+    .then(responseJSON => {
+        const copyFavoriteArray = [...favorites]
         const indexUpdatedFavorite = copyFavoriteArray.findIndex(favorite => {
             return favorite.id === updatedFavorite.id
-          })
+        })
         copyFavoriteArray[indexUpdatedFavorite] = responseJSON
-        setFavorites(copyFavoriteArray);
-      });
+        setFavorites(copyFavoriteArray)
+    });
   };
 
   return (
     <section className="Favorites">
       <h2>Favorites</h2>
-      {favorites.map((favorite) => {
-      <Favorite key={favorite.id} favorite={favorite} handleDelete={handleDelete} handleEdit={handleEdit} />
-})}
+      <FavoriteForm handleSubmit={handleAdd}>
+        <h3>Add a New Favorite</h3>
+      </FavoriteForm>
+      {favorites.map((favorite) => (
+        <Favorite key={favorite.id} favorite={favorite} handleDelete={handleDelete} handleEdit={handleEdit} />
+      ))}
     </section>
   );
 }
-
 
 export default Favorites;
