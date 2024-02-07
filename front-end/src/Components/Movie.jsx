@@ -5,8 +5,8 @@ function Movie({ movie }) {
   return (
     <tr>
       <td>
-        {movie.is_favorite ? (
-          <span role="img" aria-label="Favorite">
+        {movie.dvd ? (
+          <span role="img" aria-label="DVD">
             🍿
           </span>
         ) : (

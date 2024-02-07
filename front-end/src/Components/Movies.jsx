@@ -4,7 +4,16 @@ import Movie from "./Movie";
 const API = import.meta.env.VITE_API_URL;
 
 function Movies() {
-  const [movies, setMovies] = useState([]);
+  const [movies, setMovies] = useState({
+    title: "",
+    url: "",
+    released: "",
+    director: "",
+    genre: "",
+    rated: "",
+    dvd: false,
+    imdb_Ratings: 0,
+  });
 
   useEffect(() => {
     const fetchData = async () => {

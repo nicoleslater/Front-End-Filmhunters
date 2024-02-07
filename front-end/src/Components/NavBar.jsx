@@ -6,7 +6,7 @@ import "./NavBar.css";
 const NavBar = () => {
     return (
         <div> 
-            <div class="navbar">
+            <div className="navbar">
             <a href="../front-end/src/Pages/Home.jsx">Home</a>
             <a href="../front-end/src/Pages/Index.jsx">Movie List</a>
             <a href="../front-end/src/Pages/New.jsx">Create Favorite</a>

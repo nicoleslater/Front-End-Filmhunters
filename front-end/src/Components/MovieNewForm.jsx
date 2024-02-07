@@ -12,7 +12,7 @@ function MovieNewForm() {
     director: "",
     genre: "",
     rated: "",
-    is_favorite: false,
+    dvd: false,
     imdb_Ratings: 0,
   });
 
@@ -74,12 +74,12 @@ function MovieNewForm() {
           placeholder="Action, Comedy, ..."
           onChange={handleTextChange}
         />
-        <label htmlFor="isFavorite">Favorite:</label>
+        <label htmlFor="dvd">DVD?:</label>
         <input
-          id="is_favorite"
+          id="dvd"
           type="checkbox"
           onChange={handleCheckboxChange}
-          checked={movie.is_favorite}
+          checked={movie.dvd}
         />
         <br />
         <input type="submit" />
