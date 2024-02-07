@@ -7,7 +7,6 @@ function MovieNewForm() {
   const navigate = useNavigate();
   const [movie, setMovie] = useState({
     title: "",
-    url: "",
     released: "",
     director: "",
     genre: "",
@@ -55,14 +54,13 @@ function MovieNewForm() {
           placeholder="Title of the Movie..."
           required
         />
-        <label htmlFor="url">URL:</label>
+        <label htmlFor="released">Released:</label>
         <input
-          id="url"
+          id="released"
           type="text"
-          pattern="http[s]*://.+"
           required
-          value={movie.url}
-          placeholder="http://"
+          value={movie.released}
+          placeholder="Released Date...."
           onChange={handleTextChange}
         />
         <label htmlFor="genre">Genre:</label>

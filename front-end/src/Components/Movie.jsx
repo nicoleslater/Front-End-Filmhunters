@@ -1,36 +1,22 @@
-import React from "react";
-import { Link } from "react-router-dom";
+function Movie({ movie }){
 
-function Movie({ movie }) {
-  return (
-    <tr>
-      <td>
-        {movie.dvd ? (
-          <span role="img" aria-label="DVD">
-            🍿
-          </span>
-        ) : (
-          <span>&nbsp; &nbsp; &nbsp;</span>
-        )}
-      </td>
-      <td style={{ cursor: "alias" }}>
-        <a
-          href={movie.url}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {movie.title}
-        </a>
-      </td>
-      <td>
-        <Link to={`/movies/${movie.id}`}>
-          <span role="img" aria-label="Movie">
-            🎥
-          </span>
-        </Link>
-      </td>
-    </tr>
-  );
+
+ 
+  return(
+    <div>
+      <section>
+          <h5>{movie.title}</h5>
+          <p>{movie.released}</p>
+          <p>{movie.director}</p>
+          <p>{movie.genre}</p>
+          <p>{movie.rated}</p>
+          <p>{movie.dvd}</p>
+          <p>{movie.imdb_Ratings}</p>
+          </section>
+         </div>
+  )
 }
+
+
 
 export default Movie;
