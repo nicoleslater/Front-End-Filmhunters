@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import Favorites from './Components/Favorites';
 import NavBar from "./Components/NavBar";
-import Edit from "./Pages/Edit";
+import ShowFavorites from './Pages/ShowFavorites';
 import FourOFour from "./Pages/FourOFour";
 import Home from "./Pages/Home";
 import Index from "./Pages/Index";
