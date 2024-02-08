@@ -1,35 +1,36 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+`;
+
+const Heading = styled.h1`
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+`;
+
+const Subtext = styled.p`
+    font-size: 18px;
+    color: #666;
+    max-width: 600px;
+`;
 
 const FourOFour = () => {
     return (
-        <div style={styles.container}>
-            <h1 style={styles.heading}>Sorry, no page uncovered!</h1>
-            <p style={styles.subtext}>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
-        </div>
+        <Container>
+            <Heading>Sorry, no page uncovered!</Heading>
+            <Subtext>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</Subtext>
+        </Container>
     );
-};
-
-const styles = {
-    container: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        minHeight: '100vh',
-        padding: '20px',
-        textAlign: 'center',
-        backgroundColor: '#f9f9f9',
-    },
-    heading: {
-        fontSize: '36px',
-        fontWeight: 'bold',
-        marginBottom: '20px',
-    },
-    subtext: {
-        fontSize: '18px',
-        color: '#666',
-        maxWidth: '600px',
-    },
 };
 
 export default FourOFour;
