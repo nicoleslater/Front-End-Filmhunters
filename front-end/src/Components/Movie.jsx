@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React from "react";
 import "./Movie.css";
+import Poster from "../assets/Poster.jpeg";
 
 
 
@@ -13,6 +14,7 @@ function Movie({ movie }) {
       <div className="card w-96 bg-primary text-primary-content">
         <div className="card-body">
           <h2 className="card-title">{movie.title}</h2>
+          <img src={Poster} alt={Poster} className="poster" />
           <p>{movie.released}</p>
           <p>{movie.director}</p>
           <p>{movie.genre}</p>
