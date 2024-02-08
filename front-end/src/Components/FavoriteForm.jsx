@@ -2,27 +2,20 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 
-function FavoriteForm({ favoriteDetails, handleSubmit, toggleView }){
+function FavoriteForm({ favoriteDetails, toggleView }){
     let { id } = useParams();
 
     const [favorite, setFavorite] = useState({
         title: "",
         notes:"",
         rating: 0,
-        movie_id: id
+        movie_id: id,
     });
 
     const handleTextChange = (event) => {
         setFavorite({...favorite, [event.target.id]: event.target.value})
     };
-
-    useEffect(() => {
-        if(favoriteDetails){
-            setFavorite(favoriteDetails);
-        }
-    }, [id, favoriteDetails]);
-
-    const onSubmit = (event) => {
+    const handleSubmit = (event) => {
         event.preventDefault();
         handleSubmit(favorite, id); 
         if(favoriteDetails){
@@ -37,9 +30,16 @@ function FavoriteForm({ favoriteDetails, handleSubmit, toggleView }){
         console.log("Setting new favorite!");
     };
 
+    useEffect(() => {
+        if(favoriteDetails){
+            setFavorite(favoriteDetails);
+        }
+    }, [id, favoriteDetails]);
+
+   
 return (
     <div className="Edit">
-        <form onSubmit={onSubmit}>
+        <form handleSubmit={handleSubmit}>
             <label htmlFor="title">Title</label>
             <input
             id="title"

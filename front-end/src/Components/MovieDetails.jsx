@@ -1,17 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Favorites from './Favorites';
+import FavoriteForm from './FavoriteForm';
 import styled from 'styled-components';
 
 const API = import.meta.env.VITE_API_URL;
 
 
-const Container = styled.div`
+const CardContainer = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    border: 10px solid #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 `;
 
 const ButtonContainer = styled.div`
@@ -32,7 +36,7 @@ const Description = styled.p`
     margin-bottom: 10px;
 `;
 
-const Director = styled.h3`
+const Director = styled.h4`
     font-size: 20px;
     margin-bottom: 10px;
 `;
@@ -42,8 +46,8 @@ const Genre = styled.h4`
     margin-bottom: 10px;
 `;
 
-const Rated = styled.h2`
-    font-size: 24px;
+const Rated = styled.h4`
+    font-size: 20px;
 `;
 
 function MovieDetails() {
@@ -72,15 +76,12 @@ function MovieDetails() {
     };
 
     return (
-        <Container>
+        <CardContainer>
             <ButtonContainer>
                 <Link to="/movies">
-                    <BackButton>Back</BackButton>
+                    <BackButton>Back to Movies</BackButton>
                 </Link>
-                <Link to={`/movies/${id}`}>
-                    <button>Movie</button>
-                </Link>
-                <button onClick={handleDelete}>Delete</button>
+                <button onClick={handleDelete}>Delete Movie</button>
             </ButtonContainer>
             <div>
                 <MovieTitle>{movie.title}</MovieTitle>
@@ -90,9 +91,9 @@ function MovieDetails() {
                 <Rated>{movie.rated}</Rated>
             </div>
             <div>
-                <Favorites />
+                <FavoriteForm />
             </div>
-        </Container>
+        </CardContainer>
     );
 }
 
