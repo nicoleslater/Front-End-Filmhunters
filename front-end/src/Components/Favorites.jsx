@@ -6,7 +6,7 @@ import FavoriteForm from "./FavoriteForm";
 const API = import.meta.env.VITE_API_URL;
 
 function Favorites() {
-  const [favorites, setFavorites] = useState([]);
+  const [ favorites, setFavorites ] = useState([]);
   let { id } = useParams();
 
   useEffect(() => {
@@ -28,7 +28,7 @@ function Favorites() {
     })
       .then((response) => response.json())
       .then((responseJSON) => {
-        setFavorites([...reviews, responseJSON]);
+        setFavorites([...favorites, responseJSON]);
       })
       .catch((error) => console.log(error));
   };
@@ -71,9 +71,9 @@ function Favorites() {
       <FavoriteForm handleSubmit={handleAdd}>
         <h3>Add a New Favorite</h3>
       </FavoriteForm>
-      {favorites.map((favorite) => (
+      {favorites.map((favorite) => {
         <Favorite key={favorite.id} favorite={favorite} handleDelete={handleDelete} handleEdit={handleEdit} />
-      ))}
+})}
     </section>
   );
 }
