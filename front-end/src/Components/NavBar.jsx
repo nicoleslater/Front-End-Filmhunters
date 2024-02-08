@@ -10,6 +10,9 @@ const NavBar = () => {
                 <Link to="/movies" className="navbar-link">Movie List</Link>
                 <Link to="/movies/:id/favorites" className="navbar-link">Favorites</Link>
             </div>
+          <div className="quick-links">
+                <Link to="/movies/new" className="quick-link">Add Movie</Link>
+            </div>
             <div className="search-section">
                 <h6 className="search-header">
                     🍿 Search for Movies by Google 🍿
@@ -18,9 +21,6 @@ const NavBar = () => {
                     <input type="text" name="q" placeholder="Search for movies on Google" className="search-input"/>
                     <input type="submit" value="Google Search" className="search-button"/>
                 </form> 
-            </div>
-            <div className="quick-links">
-                <Link to="/movies/new" className="quick-link">New Movie</Link>
             </div>
         </nav>
     );
