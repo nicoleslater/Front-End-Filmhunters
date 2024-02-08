@@ -10,7 +10,7 @@ function MovieNewForm() {
     released: "",
     director: "",
     genre: "",
-    rated: "",
+    rated: 0,
     dvd: false,
     imdb_Ratings: 0,
   });

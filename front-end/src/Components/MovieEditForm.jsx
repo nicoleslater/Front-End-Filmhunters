@@ -102,7 +102,7 @@ function MovieEditForm() {
             <input
           id="rated"
           value={movie.rated}
-          type="text"
+          type=" number"
           onChange={handleTextChange}
           placeholder="Rated..."
           required

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Movie from "./Movie";
 
 const API = import.meta.env.VITE_API_URL;
@@ -9,7 +9,7 @@ function Movies() {
     released: "",
     director: "",
     genre: "",
-    rated: "",
+    rated: 0,
     dvd: false,
     imdb_Ratings: 0,
   });
