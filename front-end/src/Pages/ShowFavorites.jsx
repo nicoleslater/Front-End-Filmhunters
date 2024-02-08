@@ -1,4 +1,3 @@
-
 import Favorites from '../Components/Favorites';
 
 function ShowFavorites() {
