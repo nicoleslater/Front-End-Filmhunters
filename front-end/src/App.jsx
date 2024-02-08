@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import FavoriteForm from "../src/Pages/FavoriteForm";
+import FavoriteForm from "../src/Components/FavoriteForm";
 import NavBar from "../src/Components/NavBar";
 import ShowFavorites from "../src/Pages/ShowFavorites";
 import FourOFour from "../src/Pages/FourOFour";
