@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import Movie from "./Movie";
+import { useState, useEffect } from "react";
+import Movie from "../Components/Movie";
 
 const API = import.meta.env.VITE_API_URL;
 
