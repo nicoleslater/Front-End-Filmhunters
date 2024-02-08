@@ -17,7 +17,7 @@ function Favorite({ favorite, handleDelete, handleEdit }) {
             toggleView={toggleView}
             handleSubmit={handleEdit}
           />
-          <button onClick={toggleView}>Cancel</button>
+          <button onClick={toggleView}>{viewEditForm ? "Cancel" : "Edit this favorite"}</button>
         </>
       ) : (
         <>
@@ -27,7 +27,7 @@ function Favorite({ favorite, handleDelete, handleEdit }) {
           </h4>
           <h5>{favorite.rating}</h5>
           <p>{favorite.movie_id}</p>
-          <button onClick={toggleView}>Edit this favorite</button>
+          <button onClick={toggleView}>{viewEditForm ? "Cancel" : "Edit this favorite"}</button>
           <button onClick={() => handleDelete(favorite.id)}>Delete</button>
         </>
       )}
