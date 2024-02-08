@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+
+const API = import.meta.env.VITE_API_URL;
+
 
 const Container = styled.div`
   max-width: 800px;
@@ -67,18 +70,18 @@ const [searchTerm, setSearchTerm] = useState('');
         type="text"
         placeholder="Search for movies..."
         value={searchTerm}
-        onChange={(e) => setSearchTerm(e.target.value)}
+        onChange={(event) => setSearchTerm(event.target.value)}
       />
       <button onClick={handleSearch}>Search</button>
       <MovieList>
-        {searchResults.map((movie) => (
+        {searchResults.map((movie) => {
           <MovieItem key={movie.id}>
             {movie.title}
             <AddToFavoritesButton onClick={() => addToFavorites(movie.id)}>
               Add to Favorites
             </AddToFavoritesButton>
           </MovieItem>
-        ))}
+        })}
       </MovieList>
     </Container>
   );
