@@ -4,34 +4,19 @@ import Movie from "./Movie";
 const API = import.meta.env.VITE_API_URL;
 
 function Movies() {
-  const [movies, setMovies] = useState({
-    title: "",
-    released: "",
-    director: "",
-    genre: "",
-    rated: 0,
-    dvd: false,
-    imdb_Ratings: 0,
-  });
+  const [movies, setMovies] = useState([]);
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`${API}/movies`);
-        console.log(`${API}/movies`)
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        const responseJSON = await response.json();
-        console.log(responseJSON);
-        setMovies(responseJSON.data.payload);
-      } catch (error) {
-        console.error("Error fetching movies:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+fetch(`${API}/movies`)
+.then(response => response.json())
+.then((responseJSON) => {
+  console.log(responseJSON);
+  setMovies(responseJSON.data.payload);
+})
+.catch((error) => {
+  console.log(error);
+})
+}, []);
 
   return (
     <div className="Movies">
