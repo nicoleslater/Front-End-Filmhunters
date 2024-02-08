@@ -17,7 +17,7 @@ function FavoriteForm({ favoriteDetails, toggleView }){
     };
     const handleSubmit = (event) => {
         event.preventDefault();
-        handleSubmit(favorite, id); 
+        onSubmit(favorite, id); 
         if(favoriteDetails){
             toggleView();
         }
