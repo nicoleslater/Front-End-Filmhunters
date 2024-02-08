@@ -1,6 +1,7 @@
-import Favorites from '../Components/Favorites';
+import Favorites from "../Components/Favorites";
 
 function ShowFavorites() {
+
   return (
     <div>
       <Favorites />
