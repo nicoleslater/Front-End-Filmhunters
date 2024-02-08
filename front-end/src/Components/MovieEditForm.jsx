@@ -126,7 +126,9 @@ function MovieEditForm() {
           required
         />
         </form>
-      
+        <Link to={`/movies/${id}`}>
+        <button>Nevermind!</button>
+      </Link>
     </div>
   )
 }
