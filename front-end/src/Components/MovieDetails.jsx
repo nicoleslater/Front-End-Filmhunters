@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
-import FavoriteForm from './FavoriteForm';
-import styled from 'styled-components';
+import React, { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import FavoriteForm from "../Components/FavoriteForm";
+import styled from "styled-components";
 
 const API = import.meta.env.VITE_API_URL;
 
