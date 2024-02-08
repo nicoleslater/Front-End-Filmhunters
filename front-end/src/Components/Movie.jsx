@@ -19,13 +19,12 @@ function Movie({ movie }){
           <p>{movie.dvd}</p>
           <p>{movie.imdb_Ratings}</p>
     <div className="card-actions justify-end">
-      <button className="btn">Buy Now</button>
+    <div>
+          <Link to={`/movies/${movie.id}`}></Link>
+          </div>
     </div>
   </div>
 </div>
-   <div>
-          <Link to={`/movies/${movie.id}`}></Link>
-          </div>
          </div>
   )
 }
