@@ -9,16 +9,21 @@ function Movie({ movie }){
  
   return(
     <div>
-      <section>
-          <h5>{movie.title}</h5>
+     <div className="card w-96 bg-primary text-primary-content">
+  <div className="card-body">
+    <h2 className="card-title">{movie.title}</h2>
           <p>{movie.released}</p>
           <p>{movie.director}</p>
           <p>{movie.genre}</p>
           <p>{movie.rated}</p>
           <p>{movie.dvd}</p>
           <p>{movie.imdb_Ratings}</p>
-          </section>
-          <div>
+    <div className="card-actions justify-end">
+      <button className="btn">Buy Now</button>
+    </div>
+  </div>
+</div>
+   <div>
           <Link to={`/movies/${movie.id}`}></Link>
           </div>
          </div>
