@@ -1,10 +1,10 @@
-import Movie from "../Components/Movie";
+import MovieDetails from "../Components/MovieDetails";
 
 function Show(){
     return (
         <div className="Show">
           <h2>Show</h2>
-          <Movie />
+          <MovieDetails />
         </div>
       );
 }
