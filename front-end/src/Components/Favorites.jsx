@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import Favorite from "./Favorite";
-import FavoriteForm from "./FavoriteForm";
+import Favorite from "../Components/Favorite";
+import FavoriteForm from "../Components/FavoriteForm";
 
 const API = import.meta.env.VITE_API_URL;
 

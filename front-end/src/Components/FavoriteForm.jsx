@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 
 
-function FavoriteForm({ favoriteDetails, toggleView }){
+function FavoriteForm({ favoriteDetails, toggleView, handleSubmit, children }){
     let { id } = useParams();
 
     const [favorite, setFavorite] = useState({
@@ -15,9 +15,9 @@ function FavoriteForm({ favoriteDetails, toggleView }){
     const handleTextChange = (event) => {
         setFavorite({...favorite, [event.target.id]: event.target.value})
     };
-    const handleSubmit = (event) => {
+    const onSubmit = (event) => {
         event.preventDefault();
-        onSubmit(favorite, id); 
+        handleSubmit(favorite, id); 
         if(favoriteDetails){
             toggleView();
         }
@@ -39,7 +39,8 @@ function FavoriteForm({ favoriteDetails, toggleView }){
    
 return (
     <div className="Edit">
-        <form handleSubmit={handleSubmit}>
+        {children}
+        <form onSubmit={onSubmit}>
             <label htmlFor="title">Title</label>
             <input
             id="title"

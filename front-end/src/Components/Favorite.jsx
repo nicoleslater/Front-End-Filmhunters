@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import FavoriteForm from "./FavoriteForm";
+import { useState } from "react";
+import FavoriteForm from "../Components/FavoriteForm";
 
 function Favorite({ favorite, handleDelete, handleEdit }) {
   const [viewEditForm, setEditForm] = useState(false);
@@ -26,8 +26,10 @@ function Favorite({ favorite, handleDelete, handleEdit }) {
             <span>{favorite.notes}</span>
           </h4>
           <h5>{favorite.rating}</h5>
-          <p>{favorite.movie_id}</p>
-          <button onClick={toggleView}>{viewEditForm ? "Cancel" : "Edit this favorite"}</button>
+    
+          <button onClick={toggleView}>
+            {viewEditForm ? "Cancel" : "Edit this favorite"}
+            </button>
           <button onClick={() => handleDelete(favorite.id)}>Delete</button>
         </>
       )}
