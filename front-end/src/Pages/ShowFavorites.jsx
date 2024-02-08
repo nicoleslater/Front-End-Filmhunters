@@ -1,4 +1,4 @@
-import React from 'react';
+
 import Favorites from '../Components/Favorites';
 
 function ShowFavorites() {

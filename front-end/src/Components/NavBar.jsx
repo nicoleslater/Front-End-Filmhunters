@@ -7,9 +7,6 @@ const NavBar = () => {
             <div className="navbar-links">
                 <Link to="/" className="navbar-link">Home</Link>
                 <Link to="/movies" className="navbar-link">Movie List</Link>
-                <Link to="/movies/:id/favorites" className="navbar-link">Favorites</Link>
-            </div>
-          <div className="quick-links">
                 <Link to="/movies/new" className="quick-link">Add Movie</Link>
             </div>
             <div className="search-section">

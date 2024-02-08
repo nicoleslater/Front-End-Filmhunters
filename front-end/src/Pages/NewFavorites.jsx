@@ -1,4 +1,4 @@
-import React from 'react'
+
 import FavoriteForm from '../Components/FavoriteForm';
 
 function NewFavorites() {
