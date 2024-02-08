@@ -1,13 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import Favorites from './Components/Favorites';
-import NavBar from "./Components/NavBar";
-import ShowFavorites from './Pages/ShowFavorites';
-import FourOFour from "./Pages/FourOFour";
-import Home from "./Pages/Home";
-import Index from "./Pages/Index";
-import New from "./Pages/New";
-import Show from "./Pages/Show";
+import NewFavorites from "../src/Pages/NewFavorites";
+import NavBar from "../src/Components/NavBar";
+import ShowFavorites from "../src/Pages/ShowFavorites";
+import FourOFour from "../src/Pages/FourOFour";
+import Home from "../src/Pages/Home";
+import Index from "../src/Pages/Index";
+import New from "../src/Pages/New";
+import Show from "../src/Pages/Show";
 
 function App() {
   return (
@@ -20,7 +20,8 @@ function App() {
             <Route path="/movies" element={<Index />} />
             <Route path="/movies/new" element={<New />} />
             <Route exact path="/movies/:id" element={<Show />} />
-            <Route path="/movies/:id/favorites" element={<Favorites />} />
+            <Route path="/movies/:id/favorites" element={<ShowFavorites />} />
+            <Route path="/movies/:id/favorites/new" element={<NewFavorites />} />
             <Route path="*" element={<FourOFour />} />
           </Routes>
         </main>
