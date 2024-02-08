@@ -20,7 +20,7 @@ function Movie({ movie }){
           <p>{movie.imdb_Ratings}</p>
     <div className="card-actions justify-end">
     <div>
-          <Link to={`/movies/${movie.id}`}></Link>
+          <Link to={`/movies/${movie.id}`}>🍿</Link>
           </div>
     </div>
   </div>
