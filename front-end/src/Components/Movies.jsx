@@ -4,7 +4,7 @@ import Movie from "./Movie";
 const API = import.meta.env.VITE_API_URL;
 
 function Movies() {
-  const [movies, setMovies] = useState([]);
+  const [ movies, setMovies ] = useState([]);
 
   useEffect(() => {
 fetch(`${API}/movies`)
@@ -22,17 +22,10 @@ fetch(`${API}/movies`)
     <div className="Movies">
       <section>
         <table>
-          <thead>
-            <tr>
-              <th></th>
-              <th>Let me hunt for Films!</th>
-              <th>I want to see this movie</th>
-            </tr>
-          </thead>
-          <tbody>
-            {movies.map((movie) => (
-              <Movie key={movie.id} movie={movie} />
-            ))}
+            <tbody>
+            {movies.map((movie) => {
+              return <Movie key={movie.id} movie={movie} />;
+            })}
           </tbody>
         </table>
       </section>
