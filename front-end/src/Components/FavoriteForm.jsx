@@ -40,6 +40,7 @@ function FavoriteForm({ favoriteDetails, toggleView, handleSubmit, children }){
 return (
     <div className="Edit">
         {children}
+        <h2>Add to Movie to Favorites</h2>
         <form onSubmit={onSubmit}>
             <label htmlFor="title">Title</label>
             <input
