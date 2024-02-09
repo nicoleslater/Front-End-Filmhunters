@@ -4,6 +4,9 @@
     padding: 20px;
     text-align: center;
 }
+.poster{
+    width: 500px;
+}
 
 .home-heading {
     font-size: 24px;
